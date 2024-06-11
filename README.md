@@ -1,8 +1,13 @@
 # Consensus Sampling in Contrastive Decoding for Imitation Learning in Robotics
 
+
+https://github.com/rhea-mal/contrastive-imitation-learning/assets/70975260/e042b7f5-fd17-4d57-bd38-dbea6049bef0
+
+
 ## Overview
 
-LeRobot is a robotics simulation and visualization tool designed to work with the Push-T dataset. This project aims to provide a framework for visualizing, analyzing, and training robotic behavior models using the Push-T dataset. The project includes tools for dataset management, model training, and visual evaluation of robotic tasks.
+We leverage inter-sample relationships in demonstration quality using consensus sampling for contrastive imitation learning for robotics applications. Our contrastive + consensus sampling method, based on Consistency Policy, outperforms baseline behavior cloning approaches in both vanilla and consensus selected behavior cloning. We successfully integrated consensus sampling with contrastive learning for behavior cloning, demonstrating the viability of our approach for annotating human demonstrations. Additionally, we incorporated noise to handle periodic variance in rewards, effectively maintaining performance despite temporal correlations. Experiments showed that binary and continuous scoring methods yield similar performance in the PushT task, with a final 92.4\% success rate. Future research directions include pairwise mapping of similar states to good and bad demonstrations, expanding the approach to more tasks, and implementing online reinforcement learning.
+
 
 ## Features
 
@@ -16,7 +21,7 @@ LeRobot is a robotics simulation and visualization tool designed to work with th
 ### Prerequisites
 
 - Python 3.8 or later
-- Lerobot
+- Lerobot (https://github.com/huggingface/lerobot)
 - Diffusion Policy Push T demonstration dataset (https://diffusion-policy.cs.columbia.edu/data/experiments/low_dim/)
 - pip (Python package installer)
 
