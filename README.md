@@ -98,15 +98,11 @@ The `PushTImageDataset` class loads and processes the PushT v2 dataset.
 
 # Initialize dataset
 dataset = PushTImageDataset(zarr_path='pusht.zarr', horizon=16)
-
-# Get normalizer
 normalizer = dataset.get_normalizer()
 
-# Metadata and scheduler
 shape_meta = {'input_dim': 32, 'output_dim': 7}
 noise_scheduler = NoiseScheduler()
 
-# Select good demonstrations as teacher samples
 consensus_sampler = ConsensusSampling(k=2)
 demonstrations = [dataset[i] for i in range(len(dataset))]
 good_demos = consensus_sampler.select_good_demos(demonstrations)
